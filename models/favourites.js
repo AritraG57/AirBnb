@@ -1,7 +1,7 @@
 const db = require('../utils/databaseUtil');
 module.exports = class favourite {
   static addToFavourites = (homeId) => {
-    return db.execute("INSERT INTO favourites (id) VALUES (?)",
+    return db.execute("INSERT IGNORE INTO favourites (id) VALUES (?)",
         [homeId]);
   };
 
